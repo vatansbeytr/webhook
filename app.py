@@ -12,7 +12,7 @@ def user(name):
 
 @app.route('/endpoint', methods=['GET', 'POST'])
 def endpoint():
-	return request.get_json()
+	return request.get_data()
 
 if __name__ == '__main__':
     app.run(debug=True)
