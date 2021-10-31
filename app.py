@@ -10,9 +10,9 @@ def index():
 def user(name):
 	return '<h1>Hello, {0}!</h1>'.format(name)
 
-@app.route('/endpoint')
-def user():
-	return request.body.raw
+@app.route('/endpoint', methods=['GET', 'POST'])
+def endpoint():
+	return request.get_json()
 
 if __name__ == '__main__':
     app.run(debug=True)
