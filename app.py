@@ -12,6 +12,7 @@ def user(name):
 
 @app.route('/endpoint', methods=['GET', 'POST'])
 def endpoint():
+	print(str(request.get_data()))
 	return request.get_data()
 
 if __name__ == '__main__':
