@@ -17,7 +17,7 @@ def endpoint():
 	print(str(request.get_data()))
 	return request.args.get('hub.challenge')
 
-@app.route('/page)
+@app.route('/page')
 def page():
 	return render_template('index.html')
 
